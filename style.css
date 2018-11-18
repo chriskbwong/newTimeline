@@ -1,5 +1,5 @@
 /* -------------------------------- 
-Timeline Start
+Timeline
 -------------------------------- */
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 * {
@@ -26,9 +26,7 @@ a {
 }
 
 /* -------------------------------- 
-
 Main Components 
-
 -------------------------------- */
 .cd-horizontal-timeline {
   opacity: 0;
@@ -137,7 +135,7 @@ Main Components
   transform: translateZ(0);
 }
 .cd-horizontal-timeline .events a::after {
-  /* used to create the event spot based off the html*/
+  /*event spot based off the html*/
   content: '';
   position: absolute;
   left: 50%;
@@ -184,7 +182,7 @@ Main Components
   }
 }
 .cd-timeline-navigation a {
-  /* left/right arrows to navigate the timeline */
+  /* left and arrows to navigate the timeline */
   position: absolute;
   z-index: 1;
   top: 50%;
