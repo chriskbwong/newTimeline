@@ -36,7 +36,7 @@ Main Components
   transition: opacity 0.2s;
 }
 .cd-horizontal-timeline::before {
-  /* never visible - this is used in jQuery to check the current MQ */
+  /* never visible - this is used in jQuery*/
   content: 'mobile';
   display: none;
 }
