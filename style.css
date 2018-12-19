@@ -41,7 +41,7 @@ Main Components
   display: none;
 }
 .cd-horizontal-timeline.loaded {
-  /* show the timeline after events position has been set (uses javascript) */
+  /* show the timeline after events position has been set, uses javascript */
   opacity: 1;
 }
 .cd-horizontal-timeline .timeline {
