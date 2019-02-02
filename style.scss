@@ -1,5 +1,7 @@
 /* -------------------------------- 
-Timeline Start
+
+Timeline style
+
 -------------------------------- */
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
@@ -16,14 +18,112 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   color: #383838;
   background-color: #f8f8f8;
 }
 
+.dot{
+  width:35px;
+  height:35px;
+  position:absolute;
+  background: url(http://www.chriskbwong.com/grad_cap.png);
+  background-size: 100% 100%;
+}
+#caps-container {width:100%; height:100%; }
+
 a {
-  color: #7b9d6f;
+  color: #6559ae;
   text-decoration: none;
+  text-align: center;
+}
+
+/* -------------------------------- 
+
+buttons style
+
+-------------------------------- */
+.button-container {
+    display: flex;
+    margin: 60px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.button {
+  display: flex;
+  overflow: hidden;
+  margin: 10px;
+  padding: 12px 12px;
+
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms linear;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none !important;
+  text-transform: none;
+  text-transform: capitalize;
+
+  border: 0 none;
+  border-radius: 4px;
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+ 
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 160px;
+  
+  box-shadow: 2px 5px 10px var(#e4e4e4);
+}
+
+// button styles
+.button.-regular {
+  color: #6559ae;
+  background-color: #f2f2f2;
+  
+  &:hover {
+    color: #6559ae;
+    background-color: #e1e2e2;
+    opacity: 1;
+  }
+  
+  &:active {
+    background-color: #d5d6d6;
+    opacity: 1;
+  }
+  
+    &:focus {
+    outline: 1px dotted #959595;
+    outline-offset: -4px;
+  }
+}
+
+.button.-dark {
+  color: #f2f2f2;
+  background-color: #161616;
+  
+  &:hover {
+    transition: all 150ms linear;
+    opacity: .85;
+  }
+  
+   &:focus {
+    outline: 1px dotted white;
+    outline-offset: -4px;
+  }
+  
+   &:active {
+    transition: all 150ms linear;
+    opacity: .75;
+  }
 }
 
 /* -------------------------------- 
@@ -107,7 +207,7 @@ Main Components
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: #7b9d6f;
+    background-color: #6559ae;
     -webkit-transform: scaleX(0);
     -moz-transform: scaleX(0);
     -ms-transform: scaleX(0);
@@ -161,20 +261,20 @@ Main Components
 }
 
 .no-touch .cd-horizontal-timeline .events a:hover::after {
-  background-color: #7b9d6f;
-  border-color: #7b9d6f;
+  background-color: #6559ae;
+  border-color: #6559ae;
 }
 
 .cd-horizontal-timeline .events a {
   &.selected {
     pointer-events: none;
     &::after {
-      background-color: #7b9d6f;
-      border-color: #7b9d6f;
+      background-color: #6559ae;
+      border-color: #6559ae;
     }
   }
   &.older-event::after {
-    border-color: #7b9d6f;
+    border-color: #6559ae;
   }
 }
 
@@ -188,8 +288,9 @@ Main Components
   }
 }
 
-.cd-timeline-navigation a {
-  /* these are the left/right arrows to navigate the timeline */
+/*.cd-timeline-navigation a {
+  // these are the left/right arrows to navigate the timeline
+  //not yet implemented, not sure i want users to have to scroll through to find out what i am currently working on
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -199,20 +300,13 @@ Main Components
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 34px;
-  width: 34px;
+  height: 36px;
+  width: 36px;
   border-radius: 50%;
-  border: 2px solid #dfdfdf;
-  /* replace text with an icon */
-  overflow: hidden;
-  color: transparent;
-  text-indent: 100%;
-  white-space: nowrap;
-  -webkit-transition: border-color 0.3s;
-  -moz-transition: border-color 0.3s;
-  transition: border-color 0.3s;
+  border: 18px solid #dfdfdf;
+  
   &::after {
-    /* arrow icon */
+    // arrow icon 
     content: '';
     position: absolute;
     height: 16px;
@@ -226,8 +320,7 @@ Main Components
     -ms-transform: translateX(-50%) translateY(-50%);
     -o-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(../img/cd-arrow.svg) no-repeat 0 0;
-  }
+   }
   &.prev {
     left: 0;
     -webkit-transform: translateY(-50%) rotate(180deg);
@@ -239,10 +332,10 @@ Main Components
   &.next {
     right: 0;
   }
-}
+}*/
 
 .no-touch .cd-timeline-navigation a:hover {
-  border-color: #7b9d6f;
+  border-color: #6559ae;
 }
 
 .cd-timeline-navigation a.inactive {
@@ -257,7 +350,7 @@ Main Components
 }
 
 .cd-horizontal-timeline .events-content {
-  position: relative;
+  position: absolute;
   width: 100%;
   margin: 2em 0;
   overflow: hidden;
@@ -317,7 +410,7 @@ Main Components
   h2 {
     font-weight: bold;
     font-size: 2.6rem;
-    font-family: "Playfair Display", serif;
+    font-family: "Ubuntu";
     font-weight: 700;
     line-height: 1.2;
   }
