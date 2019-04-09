@@ -7,7 +7,7 @@
   
   
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
 
       <link rel="stylesheet" href="css/style.css">
 
@@ -16,7 +16,7 @@
 
 <body>
 
-<section class="cd-horizontal-timeline">
+  <section class="cd-horizontal-timeline">
   <div class="timeline">
     <div class="events-wrapper">
       <div class="events">
@@ -110,28 +110,33 @@
         </div>
         <!--- button container--->
       </li>
-
+<div id="caps-container"></div><!--caps container -->
       <li data-date="15/05/2018">
-        <h2>Graduation!</h2>
-        <em>Education, May 2018</em>
-        <p>
-          Graduated with a bachelor's of science in computer information systems and a minor in Mandarin.
-        </p>
-        <br>
-        <br>
-        <h2>Claire Serrato M.D. Inc.</h2>
-        <em>Data Engineer Contractor, May 2018 - November 2018</em>
-        <p>
-          Contracted to rebuild a database of patients, nurses, and doctors using Python, MongoDB, and SQL (NoSQL), since the company was switching to a new system. The database ran Python scripts to automatically fill in patient data where possible.
-        </p>
-        <br>
-        <div class="button-container">
-          <a href="https://github.com/chriskbwong" target="_blank" style="text-decoration:none">
-            <div class='button -regular center'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Learn More&nbsp;<i class="fa fa-arrow-right" style="color:#6559ae"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-          </a>
-        </div>
-        <!--- button container--->
-        </p>
+        
+          <h2>Graduation!</h2>
+          <em>Education, May 2018</em>
+          <p>
+            Graduated with a bachelor's of science in computer information systems and a minor in Mandarin.
+          </p>
+          <br>
+          <div class="button-container">
+              <div class='button -regular center' onClick="gradCaps()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div id="gradCapText">Celebrate!</div>&nbsp;<i class="fa fa-graduation-cap" style="color:#6559ae"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+          </div>
+          <!--- button container--->
+          
+          <br>
+          <h2>Claire Serrato M.D. Inc.</h2>
+          <em>Data Engineer Contractor, May 2018 - November 2018</em>
+          <p>
+            Contracted to rebuild a database of patients, nurses, and doctors using Python, MongoDB, and SQL (NoSQL), since the company was switching to a new system. The database ran Python scripts to automatically fill in patient data where possible.
+          </p>
+          <br>
+          <div class="button-container">
+            <a href="https://github.com/chriskbwong" target="_blank" style="text-decoration:none">
+              <div class='button -regular center'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Learn More&nbsp;<i class="fa fa-arrow-right" style="color:#6559ae"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            </a>
+          </div>
+          <!--- button container--->
       </li>
       <li data-date="15/11/2018">
         <h2>The Coder School</h2>
@@ -164,10 +169,10 @@
           <a href="https://www.hearo.live/" target="_blank" style="text-decoration:none">
             <div class='button -regular center'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Company Site&nbsp;<i class="fa fa-globe" style="color:#6559ae"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
           </a>
-          <a href="https://www.hearo.live/" target="_blank" style="text-decoration:none">
+          <a href="https://itunes.apple.com/us/app/id1385627895?ls=1&mt=8" target="_blank" style="text-decoration:none">
             <div class='button -regular center'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apple Store&nbsp;&nbsp;<i class="fa fa-apple" style="color:#6559ae"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
           </a>
-          <a href="https://www.hearo.live/" target="_blank" style="text-decoration:none">
+          <a href="https://play.google.com/store/apps/details?id=live.hearo" target="_blank" style="text-decoration:none">
             <div class='button -regular center'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Play Store&nbsp;&nbsp;<i class="fa fa-play" style="color:#6559ae"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
           </a>
         </div>
@@ -213,6 +218,7 @@
 </section>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 
   
 
